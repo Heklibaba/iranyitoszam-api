@@ -1,0 +1,30 @@
+info:
+  name: Telepules hozzaadasa
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/cities
+  headers:
+    - name: Accept
+      value: "\tapplication/json"
+    - name: Content-Type
+      value: "\tapplication/json"
+  body:
+    type: json
+    data: |-
+      {
+          "name": "Eger",
+          "county_id": 3
+      }
+  auth:
+    type: bearer
+    token: 
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
